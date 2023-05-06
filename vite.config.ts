@@ -9,6 +9,10 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      workbox: {
+        // プリキャッシュされるファイルのサイズ制限を 5MB に増やす
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+      },
       manifest: {
         lang: 'ja',
         name: 'sample cam',
