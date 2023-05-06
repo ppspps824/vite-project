@@ -5,6 +5,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    chunkSizeWarningLimit: 3000, // サイズ制限を1000キロバイトに変更
+  },
   base: "./",
   plugins: [
     react(),
